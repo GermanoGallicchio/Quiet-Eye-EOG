@@ -10,3 +10,6 @@ how to apply this function to the sample data
    algorithmChoice.polynDeg = 5;
    algorithmChoice.threshold = 33;
 4. run the function: QE_EOG(y,x_sec,algorithmChoice,"yes")
+
+## Cite as
+https://doi.org/10.5281/zenodo.8411093
