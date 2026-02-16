@@ -18,4 +18,4 @@ Notes
 - `x_sec` must span negative to positive time and include exactly one 0 (movement initiation reference).
 
 ## Cite as
-https://doi.org/10.5281/zenodo.8411093
+Gallicchio, G. (2023). Quiet-Eye-EOG. _Zenodo_. https://doi.org/10.5281/zenodo.8411092
