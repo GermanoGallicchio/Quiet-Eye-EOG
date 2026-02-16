@@ -6,10 +6,16 @@ how to apply this function to the sample data
 2. load the sample code
 3. choose the algorithm parameters, for example: 
    algorithmChoice.name = 'velocity';
-   algorithmChoice.winlen = 767;
-   algorithmChoice.polynDeg = 5;
-   algorithmChoice.threshold = 33;
-4. run the function: QE_EOG(y,x_sec,algorithmChoice,"yes")
+   algorithmChoice.winlen = 767;        % Savitzky-Golay frame length (samples)
+   algorithmChoice.polynDeg = 5;        % Savitzky-Golay polynomial degree
+   algorithmChoice.threshold = 33;  % numeric (e.g., 33) or 'auto' per-trial
+4. run the function: QE_EOG(y, x_sec, algorithmChoice, true)
+
+Notes
+- Inputs can be single-trial (vector) or multi-trial (samples × trials).
+- `threshold` accepts a scalar, a per-trial vector, or `'auto'` to estimate a per-trial threshold (stable-window robust variance → 3× std).
+- `showPlot = true` plots only the first trial when multi-trial input is provided.
+- `x_sec` must span negative to positive time and include exactly one 0 (movement initiation reference).
 
 ## Cite as
 https://doi.org/10.5281/zenodo.8411093
